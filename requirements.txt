@@ -1,0 +1,11 @@
+dash
+inquirer
+numpy
+matplotlib
+pandas
+pexpect
+plotly
+psycopg2-binary
+python-dotenv
+scipy
+seaborn

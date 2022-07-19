@@ -1,0 +1,127 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{tikz}
+\usepackage{paralist}
+\usepackage{listings}
+\usepackage{bookmark}
+\usepackage{physics}
+\usepackage{cancel}
+\input{insbox}
+\usepackage{titling}
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\usetikzlibrary{arrows, automata}
+
+
+\usepackage{geometry}
+\newgeometry{vmargin={20mm}, hmargin={15mm,17mm}}
+
+\makeatletter
+\pdfstringdefDisableCommands{\let\HyPsd@CatcodeWarning\@gobble}
+\makeatother
+
+\title{%
+  $\large \textbf{Final Project Report}$ \\
+  $\textbf{Non-Intrusive load monitoring}$ \\
+  $\large \textbf{Supervisor: Yuval Beck}$
+}
+\author{
+  $\textbf{Joel Ejenchtal \& Thomas Glezer}$\\\\
+  $\textbf{---}$\\\\
+  $\textbf{Project number:}$
+  \\\\
+}
+\date{\today}
+
+
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{design}[theorem]{Design}
+
+
+
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+ %
+ frame=lines,  % top and bottom rule only
+ framesep=2em, % separation between frame and text
+ rulecolor=\color{gray},
+ %
+ breaklines=true,
+ %
+ commandchars=\|\(\), % escape character and argument delimiters for
+                      % commands within the verbatim
+ commentchar=*        % comment character
+}
+
+\begin{document}
+
+\begin{titlingpage}
+  \maketitle
+\end{titlingpage}
+
+\pagebreak
+
+
+\tableofcontents
+
+
+\pagebreak
+
+
+\section{TODO}
+
+\begin{itemize}
+  \item json reformat
+  \item ml model for each state, run a fit to train the models, when analysis is being done we need to first run a general fit, trying to identify state\_0 if no match then try to identify state\_1 and so on.
+  \item Run a weighted average to compute the confidence level in identifying.
+\end{itemize}
+
+\section{Abstract}
+
+
+\VerbatimInput{data.txt}
+
+
+\section{Motivation}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Introduction}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+\pagebreak
+\section{Terminologies}
+
+For the sake of organization and a clear non conflicting terms while in derivation and analysis for the reader, as some the presented terms may uphold differently in different contexts, we are listing below some of those which we would like to make standard for the comprehension of this particular project.
+
+\begin{itemize}
+  \item State: A sequence in time, where a specific operation whithin a mode takes place.
+  \item Mode: A mode is a sequence of states for a machine operation.
+  \item Operation: A set of modes in a very specific arrangment of time samples
+  \item Machine:
+\end{itemize}
+
+
+
+\end{document}
